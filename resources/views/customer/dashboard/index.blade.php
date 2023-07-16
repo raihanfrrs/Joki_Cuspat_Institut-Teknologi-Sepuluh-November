@@ -8,6 +8,9 @@
 
 @section('content')
 
+{{-- flasher --}}
+@include('components/flasher')
+
 {{-- navbar --}}
 @include('components/navbarTop')
 
@@ -41,7 +44,15 @@
     <p class="text-2xl sm:text-3xl md:text-4xl font-spartan text-cuspat-blue lg:text-6xl font-bold">Cuspat</p>
     <p class="font-Lato font-medium text-[10px] md:text-base text-black">Customize Your Own Pattern Style</p>
  </div>
- <a href="" class="text-xs sm:text-sm px-8 py-2 lg:px-16 lg:py-3 lg:rounded-full lg:text-xl font-Lato font-bold rounded-2xl bg-cuspat-blue text-white">Buat Pola</a>
+ <a 
+    @guest
+        href="#" data-modal-target="masuk" data-modal-toggle="masuk"
+    @endguest
+
+    @auth
+        href="/buat-pola"
+    @endauth
+     class="text-xs sm:text-sm px-8 py-2 lg:px-16 lg:py-3 lg:rounded-full lg:text-xl font-Lato font-bold rounded-2xl bg-cuspat-blue text-white">Buat Pola</a>
 </div>
 
 <div class="w-[85%] sm:w-[88%] md:w-[82%] mx-auto mt-10">
