@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
-import "../../../css/carouselproduk.css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import img from "../../../../public/asset/produk/mockup-scarf-no-bg.png";

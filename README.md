@@ -43,7 +43,7 @@ C. project setup frontend & backend :
     ```
 7. jalankan perintah :
     ```
-    php artisan migrate
+    php artisan migrate:fresh --seed
     ```
 8. jalankan perintah :
     ```

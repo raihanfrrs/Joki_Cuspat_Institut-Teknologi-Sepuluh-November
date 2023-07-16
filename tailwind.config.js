@@ -13,6 +13,7 @@ module.exports = {
                 "cuspat-green": "#155438",
                 "cuspat-orange": "#FBAA0B",
                 "cuspat-blue": "#1A2A42",
+                "cuspat-pastel": "#B4CABF",
             },
             fontFamily: {
                 Lato: ["Lato"],

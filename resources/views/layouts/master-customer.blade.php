@@ -6,8 +6,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
     />
+       {{-- vanilla CSS  --}}
+        <link rel="stylesheet" href="{{ asset("css/carouselProduk.css") }}">
+        <link rel="stylesheet" href="{{ asset("css/customerDash.css") }}">
+
         {{-- icon website --}}
-        <link rel="icon" type="image/x-icon" href="{{ asset('asset/logo-cuspat/Logo/lingkaran.png') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('asset/logo-cuspat/logo-putih-cuspat.png') }}">
 
         {{-- JS VENDOR --}}
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>

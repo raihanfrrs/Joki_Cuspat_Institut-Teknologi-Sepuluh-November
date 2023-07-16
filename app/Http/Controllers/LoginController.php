@@ -25,12 +25,12 @@ class LoginController extends Controller
             ])->onlyInput('username');
         }
 
-        if(Auth::attempt($kredensial)){
+        if (Auth::attempt($kredensial)) {
             $request->session()->regenerate();
 
             $user = Auth::user();
 
-            if($user){
+            if ($user) {
                 return redirect()->intended('/')->with([
                     'case' => 'default',
                     'position' => 'center',
@@ -41,7 +41,7 @@ class LoginController extends Controller
 
             return redirect()->intended('/');
         }
-        
+
         return back()->withErrors([
             'username' => 'Wrong username or password!'
         ])->onlyInput('username');

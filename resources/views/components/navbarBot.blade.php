@@ -7,23 +7,46 @@
           </button>
        {{-- close button home/dashboard --}}
        {{-- button produk --}}
-        <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 group">
+        <a class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 group"
+        @guest
+        data-modal-target="masuk1" data-modal-toggle="masuk1" 
+        @endguest
+        
+        @auth
+            href="/login"
+        @endauth
+        >
           <iconify-icon class=" text-gray-500 group-hover:text-cuspat-blue" icon="fluent-mdl2:product-variant" width="24" height="24"></iconify-icon>
             <span class="text-sm font-Lato text-gray-500 font-semibold group-hover:text-cuspat-blue ">Produk</span>
-        </button>
+        </a>
        {{-- close button produk --}}
        {{-- button keranjang --}}
-        <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 group">
+        <a class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 group" 
+        @guest
+        data-modal-target="masuk1" data-modal-toggle="masuk1" 
+        @endguest
+
+        @auth
+            href="/keranjang"
+        @endauth
+       >
           <iconify-icon class=" text-gray-500 group-hover:text-cuspat-blue" icon="fa6-solid:basket-shopping" width="24" height="24"></iconify-icon>
             <span class="text-sm font-Lato text-gray-500 font-semibold group-hover:text-cuspat-blue ">Keranjang</span>
-        </button>
+        </a>
        {{-- close button keranjang --}}
         {{-- button akun --}}
         <!-- Modal toggle login -->
-        <button type="button" data-modal-target="masuk1" data-modal-toggle="masuk1" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 group">
+        <a class="inline-flex cursor-pointer flex-col items-center justify-center px-5 hover:bg-gray-50 group" 
+        @guest
+        data-modal-target="masuk1" data-modal-toggle="masuk1"
+        @endguest
+        @auth
+           href=""
+        @endauth
+         >
           <iconify-icon class=" text-gray-500 group-hover:text-cuspat-blue" icon="bi:person-fill" width="24" height="24"></iconify-icon>
             <span class="text-sm font-Lato text-gray-500 font-semibold group-hover:text-cuspat-blue">Akun</span>
-        </button>
+        </a>
          {{-- close button akun --}}
 
           <!-- Main modal login -->
