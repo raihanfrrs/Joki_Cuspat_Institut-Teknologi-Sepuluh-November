@@ -1,4 +1,4 @@
-@extends('master')
+@extends('layouts.master-customer')
 
 @section('title', $title = "| home")
 
@@ -22,18 +22,13 @@
     <!-- Carousel wrapper -->
     <div class="relative h-44  mx-auto mt-28 w-[85%] sm:w-[88%] md:w-[82%] overflow-hidden sm:h-64 md:mt-32 lg:mt-36 lg:h-96 rounded-lg ">
          <!-- Item 1 -->
-         <button type="button">
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="{{ asset("asset/promo/promo-cuspat1.jpg") }}" class="absolute  rounded-xl  block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
-         </button>
-        <button>
             <!-- Item 2 -->
             <div class="hidden duration-700  ease-in-out" data-carousel-item>
                 <img src="{{ asset("asset/promo/promo-cuspat-2.jpg") }}" class="absolute rounded-xl block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div> 
-        </button>
-        
+            </div>    
     </div>
 </div>
 
@@ -52,19 +47,20 @@
     @auth
         href="/buat-pola"
     @endauth
-     class="text-xs sm:text-sm px-8 py-2 lg:px-16 lg:py-3 lg:rounded-full lg:text-xl font-Lato font-bold rounded-2xl bg-cuspat-blue text-white">Buat Pola</a>
+     class="text-xs sm:text-sm px-8 hover:bg-blue-950 focus:ring-blue-400 focus:border-blue-400 py-2 lg:px-16 lg:py-3 lg:rounded-full lg:text-xl font-Lato font-bold rounded-2xl bg-cuspat-blue text-white">Buat Pola</a>
 </div>
 
-<div class="w-[85%] sm:w-[88%] md:w-[82%] mx-auto mt-10">
+<div id="produk" class="w-[85%] sm:w-[88%] md:w-[82%] mx-auto mt-10">
     <p class=" text-cuspat-blue font-bold font-spartan text-xl sm:text-2xl md:text-3xl lg:text-4xl">Produk Kami</p>
 </div>
 
 {{-- produk kami --}}
-<div id="CarouselProduk"></div>
+<div id="CarouselProduk"></div> 
 {{-- tutup produk kami --}}
+ 
 
 {{-- konsep kami --}}
-<div class="w-[85%] sm:w-[88%] mx-auto mt-8 md:w-[82%]">
+<div id="tentangKami" class="w-[85%] sm:w-[88%] mx-auto mt-8 md:w-[82%]">
     <p class=" text-cuspat-blue font-bold font-spartan text-xl sm:text-2xl md:text-3xl lg:text-4xl">Konsep Kami</p>
 </div>
 
