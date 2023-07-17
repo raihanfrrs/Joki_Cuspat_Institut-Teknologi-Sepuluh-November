@@ -62,3 +62,4 @@ C. project setup frontend & backend :
     / pakai valet bila ada
 
 11. buka browser `http://127.0.0.1:8000`
+# cuspat
