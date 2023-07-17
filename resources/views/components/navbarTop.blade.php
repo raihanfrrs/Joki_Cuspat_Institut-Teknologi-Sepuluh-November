@@ -9,10 +9,10 @@
 
       {{-- menu navbar --}}
       <div class="hidden mt-4 md:absolute md:ml-32 sm:flex min-[768px]:gap-5 min-[930px]:gap-10 gap-7 lg:gap-10 xl:gap-16  text-sm font-semibold text-white font-Lato">
-        <a href="#beranda" class=" hover:text-gray-300">Beranda</a>
-        <a href="#produk" class=" hover:text-gray-300">Produk</a>
-        <a href="#tentangKami" class=" hover:text-gray-300">Tentang Kami</a>
-        <a href="#kontakKami" class=" hover:text-gray-300">Kontak Kami</a>
+        <a href="#beranda" class=" hover:text-gray-300 lg:text-lg">Beranda</a>
+        <a href="#produk" class=" hover:text-gray-300 lg:text-lg">Produk</a>
+        <a href="#tentangKami" class=" hover:text-gray-300 lg:text-lg">Tentang Kami</a>
+        <a href="#kontakKami" class=" hover:text-gray-300 lg:text-lg">Kontak Kami</a>
        </div>
        {{-- tutup menu navbar --}}
 
