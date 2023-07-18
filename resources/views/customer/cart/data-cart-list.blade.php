@@ -9,7 +9,7 @@
      </div>
     </div> 
      <div class="flex w-full justify-between items-center">
-             <div class="flex items-center w-full justify-between">
+             <div class="flex items-center w-full  justify-between">
                  <div class="flex lg:hidden">
                      <input id="checkbock-pilih-semua" type="checkbox" value="" class="w-5 h-5 text-cuspat-blue border-black rounded">
                      <label for="checkbock-pilih-semua" class="ml-2 text-sm font-medium text-gray-900">Pilih Semua</label>
@@ -18,11 +18,12 @@
                      <input id="checkbock-pilih-semua" type="checkbox" value="" class="w-5 h-5 text-cuspat-blue border-black rounded">
                      <label for="checkbock-pilih-semua" class="ml-2 text-sm font-medium text-gray-400">Produk</label>
                  </div>
-                 <div class="lg:flex hidden gap-[8.4rem]">
+                 <div class="lg:flex hidden w-1/2 justify-between">
                      <span class="text-gray-400">Jumlah Barang</span>
-                     <span class="text-gray-400">Harga</span>
+                     <span class="text-gray-400 ml-7">Total harga</span>
+                     <span class="text-gray-400">Hapus</span>
                  </div>
-                 <a href="">
+                 <a href="" class="lg:hidden">
                      <div class="flex items-center lg:hidden">
                          <iconify-icon icon="iconamoon:trash-fill" width="24" height="24"></iconify-icon>
                          <label class="ml-2 text-sm font-medium text-gray-900 cursor-pointer">Hapus Semua</label> 
@@ -33,8 +34,8 @@
  </div> 
  
  <div>
-     <hr class="h-px my-5 mx-9 border-0 bg-slate-300 ">
         @foreach ($carts as $cart)
+        <hr class="h-px my-5 mx-9 border-0 bg-slate-300 ">
         <div class="w-[85%] lg:w-[90%] mx-auto flex flex-col gap-2">
             <div class="flex items-center w-full justify-between">
                 <div class="flex gap-4 items-center justify-center">
@@ -44,7 +45,7 @@
                         <span class="font-spartan text-xl font-bold lg:text-2xl">{{ $cart->custom_pattern->product->name }}</span>
                         <div class="flex flex-col gap-2">
                             <span class="font-lato text-xs text-gray-400 absolute top-7">{{ $cart->custom_pattern->product->material }}</span>   
-                            <span class="font-lato text-base  font-semibold lg:hidden">Rp. 140.000</span>
+                            <span class="font-lato text-base font-semibold lg:hidden">@rupiah($cart->custom_pattern->product->price * $cart->qty)</span>
                             <a href="">
                                 <div class="border justify-between py-1 px-2 rounded-lg border-cuspat-pastel items-center w-32 hidden lg:flex">
                                     <p>File Desain</p>
@@ -52,29 +53,24 @@
                                </div>  
                             </a>                       
                         </div>
-                    </div>
-                </div>
-
-                <div class="flex gap-4 items-center justify-center">
-                    <span class="text-lg font-lato font-medium text-cuspat-blue">{{ $cart->qty }}</span>
-                </div>
-
-                <div class="flex gap-4 items-center justify-center">
-                    <span class="text-lg font-lato font-medium text-cuspat-blue">@rupiah($cart->custom_pattern->product->price)</span>
+                    </div> 
                 </div>
           
-                <div class="lg:flex hidden gap-20 items-center">
+                <div class="lg:flex hidden w-1/2 justify-between items-center ">
                     <div class="hidden lg:flex flex-row  border-cuspat-pastel border h-10 rounded-lg w-24 md:w-28">
-                        <button class="text-gray-600 hover:text-white hover:bg-gray-500 h-full w-20 rounded-l cursor-pointer outline-none">
+                        <button  class="text-gray-600 hover:text-white hover:bg-gray-500 h-full w-20 rounded-l cursor-pointer outline-none ">
                            <span class="m-auto text-2xl font-thin">−</span>
                         </button>
                            <input type="number" class="outline-none focus:outline-none border-none text-center w-14 font-semibold text-md  md:text-basecursor-default flex items-center text-gray-900 qty" min="1" data-key="{{ $cart->id }}" id="qty_{{ $cart->id }}" value="{{ $cart->qty }}"></input>
-                        <button  class=" text-gray-600 hover:text-white hover:bg-gray-500 h-full w-20 rounded-r cursor-pointer">
+                        <button  class=" text-gray-600 hover:text-white hover:bg-gray-500 h-full w-20 rounded-r cursor-pointer outline-none">
                            <span class="m-auto text-2xl font-thin">+</span>
                         </button>
                     </div>
-                    <div class="">
-                        <span class="text-lg font-lato font-medium text-cuspat-blue">@rupiah($cart->custom_pattern->product->price * $cart->qty)</span>
+                    <span class="text-lg lg:flex hidden font-lato font-medium text-cuspat-blue">@rupiah($cart->custom_pattern->product->price * $cart->qty)</span>
+                    <div class="lg:flex hidden">
+                      <a href="">
+                        <iconify-icon icon="iconamoon:trash-fill" width="24" height="24"></iconify-icon>
+                      </a>
                     </div>
                 </div>
             
@@ -104,5 +100,5 @@
              </div>
         </div>
         @endforeach
+        <div class=" mb-16"></div>
   </div>
- <div class="mb-32"></div>

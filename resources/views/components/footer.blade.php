@@ -61,6 +61,7 @@
 
 {{-- footer mobile dan tablet --}}
 <footer class="bg-cuspat-blue w-full h-auto mb-20 px-3 md:hidden">   
+    
 <div class=" text-white">
     <div class="flex flex-col mx-4 pt-3 border-b">
         <a href=""><p class="text-lg font-semibold mb-3">Buat Pola</p></a>
