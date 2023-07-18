@@ -16,7 +16,7 @@
           <a href="#" class="block px-4 py-2 text-sm mx-2 text-gray-700 rounded-lg duration-100 ease-in-out hover:bg-cuspat-blue hover:text-white" role="menuitem">Profile</a>
         </li>
         <li>
-          <a href="#" class="block px-4 py-2 text-sm mx-2 text-gray-700 rounded-lg duration-100 ease-in-out hover:bg-cuspat-blue hover:text-white" role="menuitem">Keluar</a>
+          <a href="/logout" class="block px-4 py-2 text-sm mx-2 text-gray-700 rounded-lg duration-100 ease-in-out hover:bg-cuspat-blue hover:text-white" role="menuitem">Keluar</a>
         </li>
       </ul>
     </div>

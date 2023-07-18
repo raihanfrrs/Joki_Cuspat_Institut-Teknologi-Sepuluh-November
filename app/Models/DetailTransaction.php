@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Admin extends Model
+class DetailTransaction extends Model
 {
     use HasFactory;
 
@@ -13,13 +13,13 @@ class Admin extends Model
         'id'
     ];
 
-    public function user()
+    public function transaction()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Transaction::class);
     }
 
-    public function default_pattern()
+    public function custom_pattern()
     {
-        return $this->hasMany(DefaultPattern::class);
+        return $this->belongsTo(CustomPattern::class);
     }
 }
