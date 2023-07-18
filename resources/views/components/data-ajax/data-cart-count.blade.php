@@ -1,1 +1,1 @@
-<div class="absolute inline-flex items-center justify-center py-[2px] px-[3px] text-[8px] font-bold left-4 -top-2.5 text-white bg-red-500  rounded-full  dark:border-gray-900">{{ $count }}</div>
+<div class="absolute inline-flex items-center justify-center px-2 py-1 text-[8px] font-bold left-4 -top-2.5 text-white bg-red-500  rounded-full  ">{{ $count }}</div>
