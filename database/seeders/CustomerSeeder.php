@@ -21,6 +21,13 @@ class CustomerSeeder extends Seeder
                 'phone' => '081333903187',
                 'email' => 'rehanfarras76@gmail.com'
             ],
+            [
+                'user_id' => 3,
+                'name' => 'Kennola Irawan',
+                'slug' => 'kennola-irawan',
+                'phone' => '085274748323',
+                'email' => 'kennolairawan76@gmail.com'
+            ],
         ];
 
         foreach ($customers as $key => $value) {

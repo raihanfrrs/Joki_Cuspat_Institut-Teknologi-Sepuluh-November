@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Admin extends Model
+class Favorite extends Model
 {
     use HasFactory;
 
@@ -13,13 +13,13 @@ class Admin extends Model
         'id'
     ];
 
-    public function user()
+    public function customer()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Customer::class);
     }
 
-    public function default_pattern()
+    public function product()
     {
-        return $this->hasMany(DefaultPattern::class);
+        return $this->belongsTo(Product::class);
     }
 }
