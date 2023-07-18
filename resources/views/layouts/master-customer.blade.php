@@ -8,8 +8,8 @@
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
     />
        {{-- vanilla CSS  --}}
-        <link rel="stylesheet" href="{{ asset("css/carouselProduk.css") }}">
-        <link rel="stylesheet" href="{{ asset("css/customerDash.css") }}">
+        <link rel="stylesheet" href="{{ asset('css/carouselproduk.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/customerDash.css') }}">
 
         {{-- icon website --}}
         <link rel="icon" type="image/x-icon" href="{{ asset('asset/logo-cuspat/logo-putih-cuspat.png') }}">
@@ -35,6 +35,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
     <script src="{{ asset('asset/js/validation/validator.js') }}"></script>
     <script src="{{ asset('asset/js/customer/index.js') }}"></script>
