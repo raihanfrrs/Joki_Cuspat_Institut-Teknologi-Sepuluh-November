@@ -17,4 +17,24 @@ class Customer extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function custom_pattern()
+    {
+        return $this->hasMany(CustomPattern::class);
+    }
+
+    public function favorite()
+    {
+        return $this->hasMany(Favorite::class);
+    }
+
+    public function temp_cart()
+    {
+        return $this->hasMany(TempCart::class);
+    }
+
+    public function transaction()
+    {
+        return $this->hasMany(Transaction::class);
+    }
 }

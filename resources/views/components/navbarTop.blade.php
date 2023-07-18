@@ -2,7 +2,7 @@
    <div class=" w-full flex items-center justify-between">
      <div class="flex justify-between items-center w-full">
        <div class="flex items-center justify-between lg:gap-7">
-         <a href="" class="flex items-center">
+         <a href="/" class="flex items-center">
           <img src="{{ asset('asset/logo-cuspat/logo-putih-cuspat.png') }}" class="h-10 w-11 ml-[30px]  mt-4" alt="Flowbite Logo" />
          </a>
        </div>
@@ -81,7 +81,7 @@
               <iconify-icon class="text-white" icon="fa6-solid:basket-shopping" width="24" height="24">
                 
               </iconify-icon>
-              <div class="absolute inline-flex items-center justify-center py-[2px] px-[3px] text-[8px] font-bold left-4 -top-2.5 text-white bg-red-500  rounded-full  dark:border-gray-900">20</div>
+              <span id="data-cart-count"></span>
             </a>
             <div class=" w-[1px] h-8 bg-white"></div>
            </div>
